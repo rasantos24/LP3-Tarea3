@@ -9,10 +9,11 @@ using namespace std;
 class Sho
 {
     public:
-        vector<SDL_Texture*>sho_standing;
-        SDL_Rect rect;
+        vector<SDL_Texture*>sho_standing, pausar;
+        SDL_Rect rect, rect2;
         int frame;
         int animacion_sho;
+        bool pausa;
         Sho(SDL_Renderer* renderer);
         void draw(SDL_Renderer* renderer);
         void act();

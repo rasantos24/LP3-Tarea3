@@ -3,6 +3,11 @@
 #include<SDL_image.h>
 #include<iostream>
 #include<vector>
+#include<list>
+#include "Enemigo.h"
+#include "EnemigoAzul.h"
+#include "EnemigoVerde.h"
+#include "EnemigoRojo.h"
 #include "Sho.h"
 
 using namespace std;
@@ -45,6 +50,11 @@ int main( int argc, char* args[] )
 
     Sho sho(renderer);
 
+    list<Enemigo*> enemigos;
+    enemigos.push_back(new EnemigoAzul(renderer));
+    enemigos.push_back(new EnemigoVerde(renderer));
+    enemigos.push_back(new EnemigoRojo(renderer));
+
     //Main Loop
     int frame=0;
     int animacion_sho = 0;
@@ -61,6 +71,11 @@ int main( int argc, char* args[] )
 
         sho.act();
 
+        for(list<Enemigo*>::iterator e=enemigos.begin();
+                e!=enemigos.end();
+                e++)
+            (*e)->act();
+
         SDL_SetRenderDrawColor(renderer, 255, 100, 0, 255);
 
         // Clear the entire screen to our selected color.
@@ -69,6 +84,11 @@ int main( int argc, char* args[] )
         SDL_RenderCopy(renderer, background, NULL, &rect_background);
 
         sho.draw(renderer);
+
+        for(list<Enemigo*>::iterator e=enemigos.begin();
+                e!=enemigos.end();
+                e++)
+            (*e)->draw(renderer);
 
         SDL_RenderPresent(renderer);
 
