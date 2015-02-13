@@ -9,11 +9,11 @@ using namespace std;
 class Enemigo
 {
     public:
-        vector<SDL_Texture*>texturas;
-        SDL_Rect rect;
+        vector<SDL_Texture*>texturas, pausar;
+        SDL_Rect rect, rect2;
         int frame;
         int animacion_enemigo;
-
+        bool pausa;
         Enemigo();
         virtual ~Enemigo();
 

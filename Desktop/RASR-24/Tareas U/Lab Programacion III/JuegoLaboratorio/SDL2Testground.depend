@@ -572,15 +572,15 @@
 1423243961 source:c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\libreria\sdl2testsimple-master\sho.cpp
 	"Sho.h"
 
-1423459212 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\sho.cpp
+1423842898 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\sho.cpp
 	"Sho.h"
 
-1423458452 c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\sho.h
+1423842347 c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\sho.h
 	<SDL.h>
 	<SDL_image.h>
 	<vector>
 
-1423458104 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\main.cpp
+1423841181 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<iostream>
@@ -592,7 +592,7 @@
 	"EnemigoRojo.h"
 	"Sho.h"
 
-1423458064 c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigo.h
+1423677331 c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigo.h
 	<SDL.h>
 	<SDL_image.h>
 	<vector>
@@ -606,13 +606,13 @@
 1423458064 c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigorojo.h
 	"Enemigo.h"
 
-1423458064 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigo.cpp
+1423677331 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigo.cpp
 	"Enemigo.h"
 
 1423458064 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigoazul.cpp
 	"EnemigoAzul.h"
 
-1423458064 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigorojo.cpp
+1423841433 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigorojo.cpp
 	"EnemigoRojo.h"
 
 1423458064 source:c:\users\rafael\desktop\rasr-24\tareas u\lab programacion iii\juegolaboratorio\enemigoverde.cpp

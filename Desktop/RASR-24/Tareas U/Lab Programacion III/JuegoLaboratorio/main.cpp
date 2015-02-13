@@ -51,8 +51,8 @@ int main( int argc, char* args[] )
     Sho sho(renderer);
 
     list<Enemigo*> enemigos;
-    enemigos.push_back(new EnemigoAzul(renderer));
-    enemigos.push_back(new EnemigoVerde(renderer));
+    //enemigos.push_back(new EnemigoAzul(renderer));
+    //enemigos.push_back(new EnemigoVerde(renderer));
     enemigos.push_back(new EnemigoRojo(renderer));
 
     //Main Loop
@@ -93,7 +93,6 @@ int main( int argc, char* args[] )
         SDL_RenderPresent(renderer);
 
         frame++;
-
     }
 
 	return 0;
