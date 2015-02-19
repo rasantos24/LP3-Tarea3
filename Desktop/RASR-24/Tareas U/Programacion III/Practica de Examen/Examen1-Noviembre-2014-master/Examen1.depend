@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1415152292 source:/home/turupawn/Projects/Codeblocks/Clases/Progra3Ceutec/aDevoirs/Examen 1/Evaluador.cpp
+	"Evaluador.h"
+
+1415150927 /home/turupawn/Projects/Codeblocks/Clases/Progra3Ceutec/aDevoirs/Examen 1/Evaluador.h
+	<iostream>
+	<stack>
+
+1415152236 source:/home/turupawn/Projects/Codeblocks/Clases/Progra3Ceutec/aDevoirs/Examen 1/main.cpp
+	"Evaluador.h"
+	<iostream>
+	<math.h>
+
+1415227207 source:/home/turupawn/Projects/Codeblocks/Clases/Progra3/Examen 1/Evaluador.cpp
+	"Evaluador.h"
+
+1415226842 /home/turupawn/Projects/Codeblocks/Clases/Progra3/Examen 1/Evaluador.h
+	<iostream>
+	<stack>
+
+1415227280 source:/home/turupawn/Projects/Codeblocks/Clases/Progra3/Examen 1/main.cpp
+	"Evaluador.h"
+	<iostream>
+	<math.h>
+
+1415286192 source:c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\evaluador.cpp
+	"Evaluador.h"
+
+1415286192 c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\evaluador.h
+	<iostream>
+	<stack>
+
+1424320438 source:c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\main.cpp
+	"Evaluador.h"
+	"Mago.h"
+	"Guerrero.h"
+	"Arquero.h"
+	"Personaje.h"
+	<iostream>
+	<math.h>
+
+1424320045 source:c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\arquero.cpp
+	"Arquero.h"
+
+1424320006 c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\arquero.h
+	"Personaje.h"
+
+1424320278 c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\personaje.h
+	<iostream>
+
+1424356834 source:c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\guerrero.cpp
+	"Guerrero.h"
+
+1424292984 c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\guerrero.h
+	"Personaje.h"
+
+1424320159 source:c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\personaje.cpp
+
+1424293320 source:c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\mago.cpp
+	"Mago.h"
+
+1424291919 c:\users\rafael\desktop\rasr-24\tareas u\programacion iii\practica de examen\examen1-noviembre-2014-master\mago.h
+	"Personaje.h"
+
