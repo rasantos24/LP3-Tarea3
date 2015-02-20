@@ -31,13 +31,15 @@ Sho::Sho(SDL_Renderer* renderer)
     rect.y = 300;
     salto1 = 0;
 
-    sal=false;
-    cor=false;
+    sal = false;
+    cor = false;
 
     corre1 = 0;
 
     frame = 0;
     animacion_sho = 0;
+    animacion_correr = 0;
+    animacion_salto = 0;
     verde = rect.y;
 }
 
@@ -53,7 +55,7 @@ void Sho::corre()
 {
     verde = rect.x;
     corre1 = 0;
-    corre2 = 2;
+    corre2 = 3;
     cor = true;
 }
 
@@ -63,67 +65,45 @@ void Sho::draw(SDL_Renderer* renderer)
     {
         if(sal)
         {
-            SDL_RenderCopy(renderer, salto[animacion_sho], NULL, &rect);
-                if(frame%100==0)
+            SDL_RenderCopy(renderer, salto[animacion_salto], NULL, &rect);
+            if(frame%100==0)
+            {
+                if(salto1<3)
                 {
-                    if(salto1<3)
-                    {
-                        rect.y-=50;
-                        salto1++;
-                    }
-                    else
-                    {
-                        rect.y+=50;
-                    }
-
-                    animacion_sho++;
-                    if(animacion_sho>=salto.size())
-                        animacion_sho=0;
+                    rect.y-=50;
+                    salto1++;
                 }
-                frame++;
-                if (rect.y>=verde)
+                else
                 {
-                    sal = false;
+                    rect.y+=50;
                 }
-
-                if(cor)
-                {
-                    SDL_RenderCopy(renderer, correr[animacion_sho], NULL, &rect);
-                    if(frame%100==0)
-                    {
-                        if(corre1<3)
-                        {
-                            rect.x-=30;
-                            corre1++;
-                        }
-                        else
-                        {
-                            rect.x+=30;
-                        }
-
-                        animacion_sho++;
-                        if(animacion_sho>=correr.size())
-                            animacion_sho=0;
-                    }
-                    frame++;
-                    if(rect.x>=verde)
-                    {
-                        cor = false;
-                    }
-                }
+                animacion_salto++;
+                if(animacion_salto>=salto.size())
+                    animacion_salto=0;
+            }
+            frame++;
+            if (rect.y>=verde)
+            {
+                sal = false;
+            }
         }
         else
         {
             SDL_RenderCopy(renderer, sho_standing[animacion_sho], NULL, &rect);
-                if(frame%100==0)
-                {
-                    animacion_sho++;
-                    if(animacion_sho>=sho_standing.size())
-                        animacion_sho=0;
-                }
-                frame++;
-            SDL_RenderCopy(renderer,pausar[0],NULL,&rect2);
+            if(frame%100==0)
+            {
+                animacion_sho++;
+                if(animacion_sho>=sho_standing.size())
+                    animacion_sho=0;
+            }
+            frame++;
         }
+    }
+    else
+    {
+        SDL_RenderCopy(renderer,sho_standing[0],NULL,&rect);
+        SDL_RenderCopy(renderer,salto[0],NULL,&rect);
+        SDL_RenderCopy(renderer,pausar[0],NULL,&rect2);
     }
 }
 
@@ -141,43 +121,36 @@ void Sho::act()
             }
         }
 
-        if(!cor)
+        if(currentKeyStates[SDL_SCANCODE_A] && rect.x >= 1)
         {
-            if(currentKeyStates[SDL_SCANCODE_A] && rect.x >= 1)
-            {
-                rect.x--;
-                //corre();
-            }
+            rect.x--;
+        }
 
-            if(currentKeyStates[SDL_SCANCODE_D] && rect.x <= 800)
-            {
-                rect.x++;
-                //corre();
-            }
+        if(currentKeyStates[SDL_SCANCODE_D] && rect.x <= 800)
+        {
+            rect.x++;
         }
 
         if(currentKeyStates[SDL_SCANCODE_P])
         {
-            this->pausa=true;
+            this->pausa = true;
         }
 
         //Correr
         if(currentKeyStates[SDL_SCANCODE_A] && currentKeyStates[SDL_SCANCODE_F] && rect.x >= 1)
         {
             rect.x-=2;
-            //corre();
         }
 
         if(currentKeyStates[SDL_SCANCODE_D] && currentKeyStates[SDL_SCANCODE_F]  && rect.x <= 800)
         {
             rect.x+=2;
-            //corre();
         }
     }
 
     if(currentKeyStates[SDL_SCANCODE_O])
     {
-        this->pausa=false;
+        this->pausa = false;
     }
 }
 

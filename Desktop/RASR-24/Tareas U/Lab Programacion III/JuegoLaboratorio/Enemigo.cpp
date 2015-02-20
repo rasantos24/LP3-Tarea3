@@ -12,16 +12,19 @@ Enemigo::~Enemigo()
 
 void Enemigo::draw(SDL_Renderer* renderer)
 {
-    if(this->pausa == false){
-    SDL_RenderCopy(renderer, texturas[animacion_enemigo], NULL, &rect);
-    if(frame%100==0)
+    if(this->pausa == false)
     {
-        animacion_enemigo++;
-        if(animacion_enemigo>=texturas.size())
-            animacion_enemigo=0;
+        SDL_RenderCopy(renderer, texturas[animacion_enemigo], NULL, &rect);
+        if(frame%100==0)
+        {
+            animacion_enemigo++;
+            if(animacion_enemigo>=texturas.size())
+                animacion_enemigo=0;
+        }
+        frame++;
     }
-    frame++;
-    }else{
+    else
+    {
         SDL_RenderCopy(renderer,texturas[0],NULL,&rect);
         SDL_RenderCopy(renderer,pausar[0],NULL,&rect2);
     }

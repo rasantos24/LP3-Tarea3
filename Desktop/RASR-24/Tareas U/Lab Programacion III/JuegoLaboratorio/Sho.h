@@ -13,7 +13,7 @@ class Sho
         SDL_Rect rect, rect2;
 
         int verde=0, frame, salto1=0, salto2=0, corre1=0, corre2=0;
-        int animacion_sho;
+        int animacion_sho, animacion_salto, animacion_correr;
         bool pausa, sal, cor;
 
         Sho(SDL_Renderer* renderer);
